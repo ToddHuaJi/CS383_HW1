@@ -79,6 +79,7 @@ def print_solution(solution):
     print('Nodes generated: {:d}'.format(num_generated))
 
 
+
 ################################################################
 ### Skeleton code for your Astar implementation. Fill in here.
 ################################################################
@@ -108,9 +109,14 @@ class Astar:
         ################################################################
         ### Your code here.
         ################################################################
-
-
-        return retrieve_solution(node, num_explored=num_explored, num_generated=num_generated)
+		
+		count = 0 
+		while (count<10):
+			print 'The count is:', count
+			count = count + 1
+		
+		
+       return retrieve_solution(node, num_explored=num_explored, num_generated=num_generated)
 
 
     def f(self,node, method):
@@ -136,7 +142,7 @@ class Astar:
         elif method == 'misplaced':
             return -1 # compute misplaced tiles the number of tiles out of place
         elif method == 'null':
-            return -1 # compute null heuristic
+            return 0 # compute null heuristic
         else:
             return 0
 
